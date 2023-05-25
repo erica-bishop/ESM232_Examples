@@ -229,7 +229,6 @@ p_wrapper = function(r,K, Pinitial, simtimes, func) {
 }
 
 # now use pmap as we did before
-
 allresults = as.data.frame(sens_P$X) %>% pmap(p_wrapper, Pinitial=Pinitial, simtimes=simtimes, func=dpopgrowth)
 
 # extract out results from pmap into a data frame
